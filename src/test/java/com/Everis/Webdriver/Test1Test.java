@@ -6,28 +6,39 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.Everis.Utils.Config;
 import com.Everis.Utils.Session;
+import com.Everis.Utils.Tools;
 
 public class Test1Test {
 
 public static WebDriver driver;
 	
 	private static Logger logger = LogManager.getLogger(Session.class);
+	private StringBuffer verificationErrors = new StringBuffer();
+	
+	@Before
+	public void setUp() throws Exception {
+		driver = Session.driver;
+	}
+	
+	
 	
 	@Test
 	public void test() {
 		
-logger.info("Conectandose...");
+/*logger.info("Conectandose...");
+WebElement webElement = null;
 		
-		try {
 			switch (Config.getString("driver")) {
 			case "chrome":
 				System.setProperty("webdriver.chrome.driver", "src/main/java/chromedriver.exe");
@@ -47,12 +58,14 @@ logger.info("Conectandose...");
 			//driver.findElement(By.id("j_password")).clear();
 			//driver.findElement(By.id("j_password")).sendKeys(Config.getString("pass"));
 			driver.findElement(By.xpath("//*[@id='form']/div/ui-view/ui-view/ui-view/section/div/div[2]/div/div/div[1]/button")).click();
-		}  catch (Exception ex) {
-			logger.error(ex);
-		}
+			driver.findElement(By.xpath("holamundo")).click();
+			webElement = Tools.validateElementPresent(driver, By.xpath("//*[@id='form']/div/ui-view/ui-view/ui-view/section/"), "Nombre Cliente");
+			if (webElement == null) assertTrue(false);
+	
 		
 		
 		
-	}
+		
+*/	}
 
 }
