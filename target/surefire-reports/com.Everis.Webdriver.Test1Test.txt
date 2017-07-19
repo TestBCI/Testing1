@@ -2,7 +2,7 @@
 Test set: com.Everis.Webdriver.Test1Test
 -------------------------------------------------------------------------------
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.068 sec <<< FAILURE!
-initializationError(com.Everis.Webdriver.Test1Test)  Time elapsed: 0.011 sec  <<< ERROR!
+initializationError(com.Everis.Webdriver.Test1Test)  Time elapsed: 0.006 sec  <<< ERROR!
 java.lang.NoClassDefFoundError: Lorg/apache/log4j/Logger;
 	at java.lang.Class.getDeclaredFields0(Native Method)
 	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)

@@ -2,8 +2,8 @@ package com.Everis.Webdriver;
 
 import java.util.List;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
