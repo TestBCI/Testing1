@@ -34,16 +34,7 @@ public class Test2 {
 	}
 	
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-		
-		 logger.info("Fin");
-			
-			String verificationErrorString = verificationErrors.toString();
-			if (!"".equals(verificationErrorString)) {
-				fail(verificationErrorString);
-			}
-	}
+
 
 	@Test
 	public void test() {
@@ -74,6 +65,18 @@ public class Test2 {
 					webElement = Tools.validateElementPresent(driver, By.xpath("//*[@id='form']/div/ui-view/ui-view/ui-view/section/"), "Nombre Cliente");
 					if (webElement == null) assertTrue(false);
         
+	}
+	
+	
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		
+		 logger.info("Fin");
+			
+			String verificationErrorString = verificationErrors.toString();
+			if (!"".equals(verificationErrorString)) {
+				fail(verificationErrorString);
+			}
 	}
 
 }
