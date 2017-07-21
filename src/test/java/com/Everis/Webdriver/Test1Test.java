@@ -36,7 +36,7 @@ public static WebDriver driver;
 	@Test
 	public void test() {
 		
-/*logger.info("Conectandose...");
+logger.info("Conectandose...");
 WebElement webElement = null;
 		
 			switch (Config.getString("driver")) {
@@ -66,6 +66,6 @@ WebElement webElement = null;
 		
 		
 		
-*/	}
+	}
 
 }
