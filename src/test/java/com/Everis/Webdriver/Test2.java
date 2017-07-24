@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -24,7 +25,7 @@ public class Test2 {
 	
 	private static WebDriver driver;
     private static StringBuffer verificationErrors = new StringBuffer();
-	private static Logger logger = LogManager.getLogger(Step03_CP_03_01_015.class);
+	public static Logger log = LogManager.getLogger(Test2.class);
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -39,7 +40,7 @@ public class Test2 {
 	@Test
 	public void test() {
 		
-		logger.info("Conectandose...");
+		log.info("Conectandose...");
 		WebElement webElement = null;
 				
  				switch (Config.getString("driver")) {
@@ -71,8 +72,8 @@ public class Test2 {
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
 		
-		 logger.info("Fin");
-			
+		 log.info("Fin");
+	
 			String verificationErrorString = verificationErrors.toString();
 			if (!"".equals(verificationErrorString)) {
 				fail(verificationErrorString);
